@@ -1,10 +1,10 @@
-# $Id: Pdb.pm,v 1.2 2003/04/01 00:33:10 cvsjohan Exp $
+# $Id: Pdb.pm,v 1.4 2003/04/06 21:17:47 cvsjohan Exp $
 
 package XML::Handler::Pdb;
 use strict;
 use warnings;
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 use base 'XML::Handler::Subs';
 
@@ -163,8 +163,8 @@ sub convert_date_to_nsbasic {
 sub convert_time_to_nsbasic {
 	my ($self, $rawdate) = @_;
 
-	my ($hour, $minute) = ( $rawdate =~ /(\d+):(\d+)/ );
-	return $hour*10000+$minute*100;
+	my ($hour, $minute, $second) = ( $rawdate =~ /(\d+):(\d+):(\d+)/ );
+	return $hour*10000+$minute*100+$second;
 }
 
 1;

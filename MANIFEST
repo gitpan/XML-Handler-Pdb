@@ -1,5 +1,6 @@
 MANIFEST
 Makefile.PL
+ChangeLog
 example/example.xml
 lib/XML/Handler/Pdb.pm
 palm/PerlDB.prc
